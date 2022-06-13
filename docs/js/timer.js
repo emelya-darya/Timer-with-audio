@@ -139,6 +139,12 @@ function timerCircle() {
 
 	if (numDeg >= 120) {
 		cacheFuncAge = 0         // стоп функции по истечении времени
+		for (let i = 0; i <= 120; i++) {
+			angle += angleInt
+			drawStrip()
+		}
+		angle = -1 / 2 * Math.PI - angleInt
+		
 		cancelAnimationFrame(rafId2)
 		rafId2 = null
 		return
@@ -345,7 +351,6 @@ if (!isMobile.any()) {
 		changeInterval(event)
 	})
 }
-
 
 
 
